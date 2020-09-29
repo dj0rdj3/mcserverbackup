@@ -6,3 +6,5 @@ The script was made for my setup but you can change it however you want to suit 
 * minecraft server running in a `screen`
 * ssh keys set up between the hosts
 * passwordless `at` on remote host (dumb but works)
+* enabled wake-on-lan feature on remote motherboard
+* `rsync`, `wakeonlan`, on remote `pm-utils`
