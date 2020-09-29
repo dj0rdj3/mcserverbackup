@@ -31,6 +31,7 @@ printf "Cleaning up..."
 rm -rf $temp_dir
 rm -rf $backup_name.zip
 ssh $remote_user@$remote_ip "find /mnt/backup/mc -maxdepth 1 -mtime +4 -delete" >> /dev/null
+#in the line above, the find command doesnt work for some reason if i put in the minecraft dir var
 printf " done\n"
 printf "Putting remote storage to sleep\n"
 screen -m -d ssh $remote_user@$remote_ip "echo 'pm-suspend' | sudo at now + 1min" >> /dev/null
