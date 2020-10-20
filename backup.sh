@@ -15,6 +15,7 @@ screen -p 0 -S $minecraft_screen -X eval 'stuff "save-all"\015' >> /dev/null
 mkdir $temp_dir
 printf "Copying files..."
 rsync -aq $minecraft_dir $temp_dir --exclude plugins/dynmap/web/tiles/
+#exclude rendered dynmap as its very big and can always be re-rendered
 printf " done\n"
 screen -p 0 -S $minecraft_screen -X eval 'stuff "save-on"\015' >> /dev/null
 printf "Waking up remote storage\n"
